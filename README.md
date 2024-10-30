@@ -49,7 +49,7 @@ Le projet s'articule autour de 3 notebooks Python :
   >
   > - $R_t$ **Résidus** : représente la composante aléatoire ou les variations imprévisibles des données.
   >
-  > On analyse aussi une éventuelle **dynamique autorégressive** : &nbsp;&nbsp;&nbsp;&nbsp; $ Y_t = f(Y_{t-1}, Y_{t-2}, \dots, Y_{t-k}) $  
+  > On analyse aussi une éventuelle **dynamique autorégressive** : &nbsp;&nbsp;&nbsp;&nbsp; $Y_t = f(Y_{t-1}, Y_{t-2}, \dots, Y_{t-k})$  
   >
   > C'est-à-dire que la série à l'instant $t$ peut être modélisée en fonction de ses termes précédents s'il y a corrélation entre $Y_t$ et $Y_{t-1}, Y_{t-2}, \dots, Y_{t-k}$.
   >
@@ -57,10 +57,10 @@ Le projet s'articule autour de 3 notebooks Python :
 
 - **3_Feature_Engineering_Prediction.ipynb** :
   > Dans cette dernière partie, 2 algorithmes sont testés sur différentes composantes &rarr; *Features* (c'est-à-dire différentes variables $X_1, X_2, \dots, X_p$) :
-  > - **Régression linéaire** : $ Y_t = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon$.
-  >   - $ \beta_0 $ : Ordonnée à l'origine.
-  >   - $ \beta_1 , \beta_2 , \dots , \beta_p $ : Coefficients des variables $X_1, X_2, \dots, X_p$.
-  >   - Les coefficients $ \beta_0, \beta_1 , \beta_2 , \dots , \beta_p $ sont déterminés par minimisation d'une fonction erreur entre les variables $Y_t$ et $Y_{predict}$.
+  > - **Régression linéaire** : $Y_t = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon$.
+  >   - $\beta_0$ : Ordonnée à l'origine.
+  >   - $\beta_1 , \beta_2 , \dots , \beta_p$ : Coefficients des variables $X_1, X_2, \dots, X_p$.
+  >   - Les coefficients $\beta_0, \beta_1 , \beta_2 , \dots , \beta_p$ sont déterminés par minimisation d'une fonction erreur entre les variables $Y_t$ et $Y_{predict}$.
   >
   > - **Algorithme de Boosting** : construit de manière itérative sur un ensemble d'arbres de décision. À chaque itération, XGBoost ajuste les prédictions en appliquant des pondérations plus fortes aux observations avec des erreurs importantes. À la fin de l'entraînement, XGBoost combine les prédictions de tous les arbres pour générer la prédiction finale, offrant ainsi une performance plus robuste et précise qu'un seul arbre de décision.
   >
@@ -86,7 +86,7 @@ Pour identifier la saisonnalité, on retire la tendance de la série temporelle 
 ![Daily_Saisonnality](image/saisonality_daily.png)
 
 ### Dynamique Autorégressive
-Pour la dynamique autorégressive $ Y_t = f(Y_{t-1}, Y_{t-2}, \dots, Y_{t-k}) $, on trace et calcule la corrélation entre la série et sa version décalée dans le temps. On utilise l'autocorrélation et l'autocorrélation partielle pour déterminer la force linéaire entre notre série $Y_t$ et ses termes précédents $Y_{t-1}, Y_{t-2}, \dots, Y_{t-k}$.
+Pour la dynamique autorégressive $Y_t = f(Y_{t-1}, Y_{t-2}, \dots, Y_{t-k})$, on trace et calcule la corrélation entre la série et sa version décalée dans le temps. On utilise l'autocorrélation et l'autocorrélation partielle pour déterminer la force linéaire entre notre série $Y_t$ et ses termes précédents $Y_{t-1}, Y_{t-2}, \dots, Y_{t-k}$.
 
 ![Correlogramme](image/correlogramme.png)
 
